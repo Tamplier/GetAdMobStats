@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Get AdMob statistics",
+  "description": "This extension tries to get user id and access key from current page and get statistics according to the parameters",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["http://*.appodeal.com/admin/admob_accounts/*"],
+    "js": ["js/jquery-1.12.3.min.js", "js/content.js"]
+  }],
+  "permissions": [
+    "activeTab",
+	"tabs",
+	"http://*/*"
+  ]
+}
